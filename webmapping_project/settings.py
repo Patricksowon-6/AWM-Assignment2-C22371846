@@ -1,10 +1,10 @@
 import os
 from pathlib import Path
 
-GDAL_LIBRARY_PATH = r"C:\Users\paddy\OneDrive\Desktop\week1_hello_map\webmapping_env\Lib\site-packages\osgeo\gdal.dll"
-GEOS_LIBRARY_PATH = r"C:\Users\paddy\OneDrive\Desktop\week1_hello_map\webmapping_env\Lib\site-packages\osgeo\geos_c.dll"
-GDAL_LIBRARY_PATH = r"C:\Users\paddy\OneDrive\Desktop\week1_hello_map\webmapping_env\Lib\site-packages\osgeo\gdal.dll"
-PROJ_LIB = r"C:\Users\paddy\OneDrive\Desktop\week1_hello_map\webmapping_env\Lib\site-packages\osgeo\data\proj"
+# GDAL_LIBRARY_PATH = r"C:\Users\paddy\OneDrive\Desktop\week1_hello_map\webmapping_env\Lib\site-packages\osgeo\gdal.dll"
+# GEOS_LIBRARY_PATH = r"C:\Users\paddy\OneDrive\Desktop\week1_hello_map\webmapping_env\Lib\site-packages\osgeo\geos_c.dll"
+# GDAL_LIBRARY_PATH = r"C:\Users\paddy\OneDrive\Desktop\week1_hello_map\webmapping_env\Lib\site-packages\osgeo\gdal.dll"
+# PROJ_LIB = r"C:\Users\paddy\OneDrive\Desktop\week1_hello_map\webmapping_env\Lib\site-packages\osgeo\data\proj"
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
