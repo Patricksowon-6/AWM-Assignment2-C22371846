@@ -4,3 +4,12 @@ db.sqlite3
 *.env
 venv/
 webmapping_env
+
+
+
+
+
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/Patricksowon-6/AWM-Assignment2-C22371846.git
+git push -u origin main
