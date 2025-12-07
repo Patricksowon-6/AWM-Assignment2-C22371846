@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{% block title %}Food Finder{% endblock %}</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Leaflet & Plugins -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/2.2.0/Control.FullScreen.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-measure/3.3.0/leaflet-measure.css" />
+
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  {% block extra_css %}{% endblock %}
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-primary shadow-sm px-3">
+  <a class="navbar-brand d-flex align-items-center gap-2" href="{% url 'hello_map' %}">
+      <i class="fa-solid fa-utensils"></i>
+      <span>Food Finder</span>
+  </a>
+
+  <div class="d-flex gap-2">
+    <button id="btn-toggle-sidebar" class="btn btn-outline-light btn-sm"><i class="fa-solid fa-bars"></i></button>
+    <button id="btn-locate" class="btn btn-outline-light btn-sm"><i class="fa-solid fa-location-crosshairs"></i></button>
+  </div>
+</nav>
+
+<main>
+  {% block content %}{% endblock %}
+</main>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.min.js"></script>
+<script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/2.2.0/Control.FullScreen.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-measure/3.3.0/leaflet-measure.min.js"></script>
+
+<script src="{% static 'js/main.js' %}"></script>
+
+{% block extra_js %}{% endblock %}
+</body>
+</html>

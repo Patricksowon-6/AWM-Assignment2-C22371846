@@ -1,0 +1,39 @@
+body { font-family: 'Inter', sans-serif; }
+
+#sidebar {
+  width: 330px;
+  transition: transform .25s ease;
+}
+#sidebar.closed {
+  transform: translateX(-110%);
+}
+
+/* Map */
+#map { width: 100%; height: 100%; }
+
+/* Custom markers */
+.home-marker {
+  width: 20px; height: 20px; border-radius: 50%;
+  background: #0d6efd; border: 3px solid white;
+}
+
+.food-marker {
+  width: 14px; height: 14px; border-radius: 50%;
+  background: #dc3545; border: 2px solid white;
+}
+
+/* Temporary marker */
+.temp-marker {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ffc107;
+  border: 2px solid #fff;
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.3); opacity: .6; }
+  100% { transform: scale(1); opacity: 1; }
+}

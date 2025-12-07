@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div id="app" class="d-flex vh-100">
+
+<!-- Sidebar -->
+<aside id="sidebar" class="shadow-sm bg-white">
+    <div class="p-3 border-bottom d-flex justify-content-between align-items-center">
+        <h5 class="m-0">Restaurant Finder</h5>
+        <button id="btn-close-sidebar" class="btn btn-sm btn-light">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+
+    <div class="p-3">
+
+        <!-- Home Location Form -->
+        <form id="home-location-form" class="mb-3">
+            <div class="row g-2">
+                <div class="col-6">
+                    <input id="home-lat" class="form-control form-control-sm" placeholder="Latitude" />
+                </div>
+                <div class="col-6">
+                    <input id="home-lng" class="form-control form-control-sm" placeholder="Longitude" />
+                </div>
+            </div>
+            <div class="d-flex gap-2 mt-2">
+                <button class="btn btn-primary btn-sm w-100" type="submit">Set Home</button>
+                <button id="btn-use-my-location" type="button" class="btn btn-outline-secondary btn-sm">
+                    <i class="fa-solid fa-location-dot"></i>
+                </button>
+            </div>
+        </form>
+
+        <!-- Search -->
+        <form id="restaurant-search-form">
+            <div class="input-group input-group-sm">
+                <input id="restaurant-search" class="form-control" placeholder="Search restaurants..." />
+                <button class="btn btn-danger"><i class="fa-solid fa-search"></i></button>
+            </div>
+        </form>
+
+        <hr>
+
+        <!-- Results -->
+        <div id="results" class="list-group small"></div>
+
+        <hr>
+        <button id="btn-clear-markers" class="btn btn-outline-danger btn-sm w-100">Clear Markers</button>
+    </div>
+</aside>
+
+<!-- Map -->
+<div id="map" class="flex-grow-1"></div>
+</div>
+{% endblock %}
